@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05) 1px,
+    transparent 0.3px,
+    transparent 8px
+  );
+}
+
+.formContainer {
+  flex: 1;
+  padding: 0px 60px;
+  margin-top: -25px;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05) 1px,
+    transparent 0.3px,
+    transparent 8px
+  );
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  color: #1a202c;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+.DarkorangeLine {
+  width: 2cm; /* Sets width of the darkorange line */
+  height: 2.5px; /* Sets height of the darkorange line */
+  background-color: darkorange; /* Sets color of the darkorange line */
+  margin-top: 70px; /* Adds top margin of 100px */
+  margin-left: 10px; /* Adds left margin of 10px */
+}
+
+.firstheader {
+  display: flex;
+  align-items: center;
+}
+
+.responseMessage h4 {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  color: darkgreen;
+  font-family: 'Arial', sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.formGroup {
+  margin-bottom: 2px;
+}
+
+.input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #2d3748;
+font-family: 'Times New Roman', Times, serif;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2d3748;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 8px;
+  background-color: darkorange;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-top: 10px;
+}
