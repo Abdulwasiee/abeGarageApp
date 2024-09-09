@@ -87,10 +87,10 @@ return response.data;
   }
 };
 
-export const getOrdersByCustomerId = async (customerId) => {
+export const getOrdersByCustomerId = async (customer_id) => {
   try {
-    const response = await api.get(`/orders/customer/${customerId}`);
-    return response.data.orders;
+    const response = await api.get(`/orders/customer/${customer_id}`);
+    return response.data;
   } catch (error) {
     console.error("Error fetching orders by customer ID:", error.message);
     throw error;

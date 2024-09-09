@@ -171,11 +171,11 @@ const removeOrder = async (req, res) => {
 };
 
 const fetchCustomerOrders = async (req, res) => {
-  const { customerId } = req.params;
+  const { customer_id } = req.params;
 
   try {
-    const customerOrders = await getCustomerOrders(customerId);
-    console.log("Fetched customer orders for ID:", customerId);
+    const customerOrders = await getCustomerOrders(customer_id);
+    console.log("Fetched customer orders for ID:", customer_id);
     if (customerOrders.length === 0) {
       return res
         .status(404)

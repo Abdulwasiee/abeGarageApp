@@ -120,7 +120,7 @@ const getCustomerOrders = async (customer_id) => {
   `;
 
   const [orders] = await db.query(query, [customer_id]);
-  console.log("Fetched orders for customer:", orders);
+  console.log("Fetched orders for customer from customer:", orders);
   return orders;
 };
 async function deleteCustomerById(customer_id) {

@@ -23,8 +23,8 @@ const SingleCustomerOrders = ({ customer_id }) => {
         console.log("API response data:", response); // Log API response
 
         if (response) {
-          setOrders(response);
-          console.log("Orders set:", response); // Log the orders
+          setOrders(response.orders);
+          console.log("Orders set:", response.orders); // Log the orders
         }
       } catch (error) {
         console.error("Error fetching orders:", error.message);

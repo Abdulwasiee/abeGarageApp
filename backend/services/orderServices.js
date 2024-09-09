@@ -313,8 +313,8 @@ const getCustomerOrders = async (customer_id) => {
   `;
 
   const [orders] = await db.query(query, [customer_id]);
-  console.log("Fetched orders for customer:", orders);
-  return orders;
+  console.log("Fetched orders for customer from Order service:", orders);
+  return {orders};
 };
 
 module.exports = {

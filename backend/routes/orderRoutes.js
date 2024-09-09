@@ -24,7 +24,7 @@ router.put("/api/orders/:order_hash", editOrder);
 
 // Route to delete an order by order ID
 router.delete("/api/orders/:orderId", removeOrder);
-router.get("/api/orders/customer/:customerId", fetchCustomerOrders);
+router.get("/api/orders/customer/:customer_id", fetchCustomerOrders);
 router.get("/api/orders/mechanic/:employee_id", getOrdersByMechanicHandler);
 
 
