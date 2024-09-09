@@ -49,7 +49,9 @@ function AddOrder() {
   };
 
   const handleSelectCustomer = (customer_id) => {
-    navigate(`/admin/customers/customer-profile/${customer_id}?view=chooseVehicle`);
+    navigate(
+      `/admin/customers/customer-profile/${customer_id}?view=chooseVehicle`
+    );
   };
 
   const handleAddCustomer = () => {
@@ -59,8 +61,8 @@ function AddOrder() {
   return (
     <div className={styles.container}>
       <div className={styles.titlediv}>
-      <h2 className={styles.title}>Create a new order</h2>
-      <div className={styles.titleUnderline}></div>
+        <h2 className={styles.title}>Create a new order</h2>
+        <div className={styles.titleUnderline}></div>
       </div>
 
       <div className={styles.searchContainer}>

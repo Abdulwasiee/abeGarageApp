@@ -17,7 +17,6 @@ import {
 import BottomSections from "../BottomSections/BottomSections";
 
 function Home() {
- 
   return (
     <div className={styles.topcontainer}>
       {/* About Section */}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import styles from "./CustomerTable.module.css";
-import { fetchCustomers } from "../../../../Services/customer.service"; 
+import { fetchCustomers } from "../../../../Services/customer.service";
 
 const CustomerTable = () => {
   const [customers, setCustomers] = useState([]); // Initialize with an empty array
@@ -13,13 +13,12 @@ const CustomerTable = () => {
 
   const getCustomers = async (page) => {
     try {
- const { data, total } = await fetchCustomers(page, itemsPerPage);
+      const { data, total } = await fetchCustomers(page, itemsPerPage);
       setCustomers(Array.isArray(data) ? data : []);
       setTotalPages(Math.ceil(total / itemsPerPage));
     } catch (error) {
       console.error("Error fetching customers:", error);
       if (error.response) {
-       
       } else if (error.request) {
         // Request was made but no response was received
         console.error("Request data:", error.request);

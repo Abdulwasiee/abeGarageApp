@@ -1,9 +1,8 @@
-
 /* Styles for the Why Choose Us section */
 .whyChooseUs {
   padding: 60px 0; /* Vertical padding */
- 
-background-color: #f5f5f5;
+
+  background-color: #f5f5f5;
   background-image: repeating-linear-gradient(
     135deg,
     rgba(0, 0, 0, 0.05),
@@ -46,7 +45,7 @@ background-color: #f5f5f5;
   color: black; /* Text color */
   margin-bottom: 30px; /* Space below text */
   line-height: 1.8; /* Line height for readability */
-  font-family: 'Times New Roman', Times, serif; /* Font family */
+  font-family: "Times New Roman", Times, serif; /* Font family */
 }
 
 /* Container for icon boxes */
@@ -78,7 +77,6 @@ background-color: #f5f5f5;
 .additionalServices {
   display: flex; /* Flexbox layout */
   flex-direction: column; /* Arrange items vertically */
-
 }
 
 /* Styles for list of additional services */
@@ -94,12 +92,12 @@ background-color: #f5f5f5;
   margin-bottom: 10px; /* Space below each list item */
   position: relative; /* Position relative for pseudo-elements */
   padding-left: 25px; /* Space on the left */
-  font-family: 'Times New Roman', Times, serif; /* Font family */
+  font-family: "Times New Roman", Times, serif; /* Font family */
 }
 
 /* Styles for checkmark before each list item */
 .list li::before {
-  content: '✓'; /* Checkmark symbol */
+  content: "✓"; /* Checkmark symbol */
   position: absolute; /* Positioned absolutely within list item */
   left: 0; /* Position to the left */
   color: darkorange; /* Checkmark color */
@@ -137,18 +135,21 @@ background-color: #f5f5f5;
 }
 
 /* Container for text in the video section */
-.autoContainer, .lasttext {
+.autoContainer,
+.lasttext {
   color: white; /* Text color */
 }
 
 /* Styles for container with video section text */
-.autoContainer3, .lasttext {
+.autoContainer3,
+.lasttext {
   color: white; /* Text color */
   font-size: 20px; /* Font size */
 }
 
 /* Padding for headings in autoContainer3 */
-.autoContainer3 h5, h2 {
+.autoContainer3 h5,
+h2 {
   padding-top: 70px; /* Padding on top */
 }
 
@@ -162,7 +163,7 @@ background-color: #f5f5f5;
 .servicesSection {
   padding: 60px 0; /* Vertical padding */
   background-color: white; /* Background color */
-background-color: #f5f5f5;
+  background-color: #f5f5f5;
   background-image: repeating-linear-gradient(
     135deg,
     rgba(0, 0, 0, 0.05),
@@ -187,7 +188,7 @@ background-color: #f5f5f5;
   display: flex; /* Flexbox layout */
   justify-content: space-between; /* Distribute items with space between */
   height: 200px; /* Fixed height */
-  font-family: 'Times New Roman', Times, serif; /* Font family */
+  font-family: "Times New Roman", Times, serif; /* Font family */
 }
 
 /* Styles for section titles */
@@ -303,7 +304,7 @@ background-color: #f5f5f5;
 
 /* Styles for call to action section */
 .callToAction {
-  background-color: #1A1A3B; /* Background color */
+  background-color: #1a1a3b; /* Background color */
   color: white; /* Text color */
   text-align: center; /* Center text horizontally */
   padding: 0px 100px; /* Horizontal padding */
@@ -326,7 +327,7 @@ background-color: #f5f5f5;
 .contactusText p {
   font-size: 16px; /* Font size */
   margin: 0; /* Remove margin */
-  color: white ;
+  color: white;
 }
 
 /* Styles for contact us button */

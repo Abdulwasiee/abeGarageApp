@@ -4,7 +4,8 @@
 }
 
 .heroSection {
-  background: url('../../../../assets/images/servicebg.jpg') no-repeat center center/cover; /* Sets background image with no-repeat, centered, and cover */
+  background: url("../../../../assets/images/servicebg.jpg") no-repeat center
+    center/cover; /* Sets background image with no-repeat, centered, and cover */
   color: white; /* Sets text color to white */
   text-align: center; /* Centers text horizontally */
   padding: 50px 0px; /* Adds vertical padding of 50px on top and bottom */
@@ -15,12 +16,12 @@
 .heroSection h1 {
   font-size: 48px; /* Sets font size for main heading */
   margin-bottom: 10px; /* Adds space below the heading */
-  font-family: 'Times New Roman', Times, serif; /* Sets the font for the heading */
+  font-family: "Times New Roman", Times, serif; /* Sets the font for the heading */
 }
 
 .heroSection p {
   font-size: 21px; /* Sets font size for the paragraph */
-  font-family: 'Times New Roman', Times, serif; /* Sets the font for the paragraph */
+  font-family: "Times New Roman", Times, serif; /* Sets the font for the paragraph */
   padding: 0 10px; /* Adds horizontal padding of 10px */
 }
 
@@ -57,7 +58,7 @@
   font-size: 17px; /* Sets font size for the section text */
   color: black; /* Sets text color */
   line-height: 1.8; /* Sets line height for text */
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .row {
@@ -108,7 +109,7 @@
 
 .innerBox h5 {
   font-size: 14px; /* Sets font size for the subtitle */
-  color:dark; /* Sets text color for the subtitle */
+  color: dark; /* Sets text color for the subtitle */
   margin-bottom: 10px; /* Adds space below the subtitle */
   margin-top: 5px;
   text-transform: uppercase; /* Transforms text to uppercase */
@@ -145,7 +146,7 @@
 }
 
 .callToAction {
-  background-color: #1A1A3B; /* Set background color to a dark blue shade */
+  background-color: #1a1a3b; /* Set background color to a dark blue shade */
   color: white; /* Set text color to white */
   text-align: center; /* Center-align text */
   padding: 0px 100px; /* Add padding of 100px left/right */
@@ -173,7 +174,7 @@
   font-size: 36px; /* Set font size for the heading to 36px */
   margin: 0; /* Remove margin from the heading */
   margin-bottom: 20px !important; /* Add margin below the heading and override any other margin settings */
-margin-top: 10px;
+  margin-top: 10px;
 }
 
 .contactButton {

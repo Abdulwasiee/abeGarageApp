@@ -33,44 +33,43 @@ const VehicleSection = ({
     });
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  try {
-    console.log("Submitting vehicle data:", formData);
-    const response = await createVehicle(customer_id, formData);
-    if (response) {
-      setSuccess("Vehicle added successfully!");
-      setError("");
-      setFormData({
-        vehicle_year: "",
-        vehicle_make: "",
-        vehicle_model: "",
-        vehicle_type: "",
-        vehicle_mileage: "",
-        vehicle_tag: "",
-        vehicle_serial: "",
-        vehicle_color: "",
-      });
-      setVehicles([...vehicles, response.vehicle]); // Add the new vehicle to the list
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      console.log("Submitting vehicle data:", formData);
+      const response = await createVehicle(customer_id, formData);
+      if (response) {
+        setSuccess("Vehicle added successfully!");
+        setError("");
+        setFormData({
+          vehicle_year: "",
+          vehicle_make: "",
+          vehicle_model: "",
+          vehicle_type: "",
+          vehicle_mileage: "",
+          vehicle_tag: "",
+          vehicle_serial: "",
+          vehicle_color: "",
+        });
+        setVehicles([...vehicles, response.vehicle]); // Add the new vehicle to the list
 
-      // Shrink the form and hide it
-      setIsFormVisible(false);
+        // Shrink the form and hide it
+        setIsFormVisible(false);
 
-      // Refresh the page or reload the component by fetching vehicles again
-      setTimeout(() => {
-        window.location.reload(); // Reload the page to reflect the new vehicle
-      }, 1000); // Delay for 1 second before refresh
-    } else {
-      setError(response.error || "An unexpected error occurred.");
+        // Refresh the page or reload the component by fetching vehicles again
+        setTimeout(() => {
+          window.location.reload(); // Reload the page to reflect the new vehicle
+        }, 1000); // Delay for 1 second before refresh
+      } else {
+        setError(response.error || "An unexpected error occurred.");
+        setSuccess("");
+      }
+    } catch (err) {
+      console.error("Error occurred in handleSubmit:", err);
+      setError(err.response?.error || "Something went wrong!");
       setSuccess("");
     }
-  } catch (err) {
-    console.error("Error occurred in handleSubmit:", err);
-    setError(err.response?.error || "Something went wrong!");
-    setSuccess("");
-  }
-};
-
+  };
 
   const handleVehicleSelect = (vehicleId) => {
     navigate(`/admin/customers/vehicles/${vehicleId}`);

@@ -8,7 +8,7 @@
     transparent 0.3px,
     transparent 8px
   );
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .profileContainer {
@@ -91,7 +91,6 @@
   transform: translateX(-50%);
 }
 
-
 .sideNavItem:last-child:before {
   display: none;
 }
@@ -134,7 +133,7 @@
 }
 
 .addVehicleContainer {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   max-width: 450px;
   width: 100%;
   padding: 0 20px;

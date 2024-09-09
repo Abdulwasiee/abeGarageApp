@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styles from './BottomSections.module.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import styles from "./BottomSections.module.css";
 // Import images to be used in the component
 import workshopLeft from "../../../../assets/images/workshopLeft.png"; // Import image assets
 
@@ -98,7 +98,9 @@ function BottomSections() {
         <div className={styles.autoContainer3}>
           <h5>Working since 1992</h5> {/* Subtitle indicating experience */}
           <div className={styles.greenLine}></div> {/* Decorative line */}
-          <h2 style={{color:"white"}}>We are leaders in Car Mechanical Work</h2>{" "}
+          <h2 style={{ color: "white" }}>
+            We are leaders in Car Mechanical Work
+          </h2>{" "}
           {/* Main heading for the video section */}
           <div className={styles.videoBox}>
             <div className={styles.videoBtn}>
@@ -143,8 +145,8 @@ function BottomSections() {
           {/* Link to the Contact Us page */}
         </div>
       </section>
-  </>
+    </>
   );
 }
 
-export default BottomSections
+export default BottomSections;

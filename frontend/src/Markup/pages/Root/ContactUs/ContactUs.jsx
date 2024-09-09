@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"; // Import Link component from react-rou
 import BottomSections from "../BottomSections/BottomSections";
 
 const ContactUs = () => {
-
   return (
     <div className={styles.contactUs}>
       {" "}
@@ -14,7 +13,9 @@ const ContactUs = () => {
         {/* Hero section with title and breadcrumb navigation */}
         <h1>Contact Us</h1> {/* Main heading for the page */}
         <p>
-          <Link to="/home">Home</Link>  <span style={{color:"white"}}>&gt;</span> {/* Breadcrumb link to Home page */}
+          <Link to="/home">Home</Link>{" "}
+          <span style={{ color: "white" }}>&gt;</span>{" "}
+          {/* Breadcrumb link to Home page */}
           <Link to="/aboutus">About Us</Link>{" "}
           {/* Breadcrumb link to About Us page */}
         </p>

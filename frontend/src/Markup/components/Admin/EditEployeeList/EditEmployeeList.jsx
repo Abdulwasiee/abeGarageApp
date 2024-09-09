@@ -71,7 +71,8 @@ function EditEmployeeList() {
       }, 2000);
     } catch (error) {
       setResponseMessage(
-        error.response?.data?.error || "An error occurred while updating the employee."
+        error.response?.data?.error ||
+          "An error occurred while updating the employee."
       );
     }
   };
@@ -81,143 +82,143 @@ function EditEmployeeList() {
   }
 
   return (
-      <div className={styles.formContainer}>
-        <h2 className={styles.formTitle}>Edit Employee</h2>
-        {responseMessage && (
-          <div className={styles.responseMessage}>
-            <h4>{responseMessage}</h4>
-          </div>
-        )}
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <div className={styles.formGroup}>
-            <label htmlFor="employee_first_name" className={styles.label}>
-              First Name
-            </label>
-            <input
-              type="text"
-              id="employee_first_name"
-              name="employee_first_name"
-              value={employeeData.employee_first_name || ""}
-              onChange={handleChange}
-              className={styles.input}
-              placeholder="Enter Employee First Name"
-            />
-          </div>
+    <div className={styles.formContainer}>
+      <h2 className={styles.formTitle}>Edit Employee</h2>
+      {responseMessage && (
+        <div className={styles.responseMessage}>
+          <h4>{responseMessage}</h4>
+        </div>
+      )}
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <div className={styles.formGroup}>
+          <label htmlFor="employee_first_name" className={styles.label}>
+            First Name
+          </label>
+          <input
+            type="text"
+            id="employee_first_name"
+            name="employee_first_name"
+            value={employeeData.employee_first_name || ""}
+            onChange={handleChange}
+            className={styles.input}
+            placeholder="Enter Employee First Name"
+          />
+        </div>
 
-          <div className={styles.formGroup}>
-            <label htmlFor="employee_last_name" className={styles.label}>
-              Last Name
-            </label>
-            <input
-              type="text"
-              id="employee_last_name"
-              name="employee_last_name"
-              value={employeeData.employee_last_name || ""}
-              onChange={handleChange}
-              className={styles.input}
-              placeholder="Enter Employee Last Name"
-            />
-          </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="employee_last_name" className={styles.label}>
+            Last Name
+          </label>
+          <input
+            type="text"
+            id="employee_last_name"
+            name="employee_last_name"
+            value={employeeData.employee_last_name || ""}
+            onChange={handleChange}
+            className={styles.input}
+            placeholder="Enter Employee Last Name"
+          />
+        </div>
 
-          <div className={styles.formGroup}>
-            <label htmlFor="employee_phone" className={styles.label}>
-              Phone Number
-            </label>
-            <input
-              type="text"
-              id="employee_phone"
-              name="employee_phone"
-              value={employeeData.employee_phone || ""}
-              onChange={handleChange}
-              className={styles.input}
-              placeholder="Enter Employee Phone Number"
-            />
-          </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="employee_phone" className={styles.label}>
+            Phone Number
+          </label>
+          <input
+            type="text"
+            id="employee_phone"
+            name="employee_phone"
+            value={employeeData.employee_phone || ""}
+            onChange={handleChange}
+            className={styles.input}
+            placeholder="Enter Employee Phone Number"
+          />
+        </div>
 
-          <div className={styles.formGroup}>
-            <label htmlFor="company_role_name" className={styles.label}>
-              Role
-            </label>
-            <select
-              id="company_role_name"
-              name="company_role_name"
-              value={employeeData.company_role_name || ""}
+        <div className={styles.formGroup}>
+          <label htmlFor="company_role_name" className={styles.label}>
+            Role
+          </label>
+          <select
+            id="company_role_name"
+            name="company_role_name"
+            value={employeeData.company_role_name || ""}
+            onChange={handleChange}
+            className={styles.input}
+          >
+            <option value="">Select a role</option>
+            <option value="Admin">Admin</option>
+            <option value="Manager">Manager</option>
+            <option value="Employee">Employee</option>
+          </select>
+        </div>
+
+        <div className={styles.formGroup}>
+          <label htmlFor="employee_email" className={styles.label}>
+            Email
+          </label>
+          <input
+            type="email"
+            id="employee_email"
+            name="employee_email"
+            value={employeeData.employee_email || ""}
+            onChange={handleChange}
+            className={styles.input}
+            placeholder="Enter Employee Email"
+          />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label htmlFor="employee_password" className={styles.label}>
+            Password
+          </label>
+          <div className={styles.passwordWrapper}>
+            <input
+              type={showPassword ? "text" : "password"}
+              id="employee_password"
+              name="employee_password"
+              value={employeeData.employee_password || ""}
               onChange={handleChange}
               className={styles.input}
+              placeholder="Enter New Employee Password"
+            />
+            <span
+              className={styles.passwordToggle}
+              onClick={() => setShowPassword(!showPassword)}
             >
-              <option value="">Select a role</option>
-              <option value="Admin">Admin</option>
-              <option value="Manager">Manager</option>
-              <option value="Employee">Employee</option>
-            </select>
+              {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+            </span>
           </div>
+        </div>
 
-          <div className={styles.formGroup}>
-            <label htmlFor="employee_email" className={styles.label}>
-              Email
-            </label>
-            <input
-              type="email"
-              id="employee_email"
-              name="employee_email"
-              value={employeeData.employee_email || ""}
-              onChange={handleChange}
-              className={styles.input}
-              placeholder="Enter Employee Email"
-            />
-          </div>
+        <div className={styles.lastformGroup}>
+          <input
+            type="checkbox"
+            id="active_employee"
+            name="active_employee"
+            checked={employeeData.active_employee === 1}
+            onChange={(e) =>
+              handleChange({
+                target: {
+                  name: "active_employee",
+                  value: e.target.checked ? 1 : 0,
+                  type: "checkbox",
+                  checked: e.target.checked,
+                },
+              })
+            }
+            className={styles.inputCheckbox}
+          />
+          <label htmlFor="active_employee" className={styles.label}>
+            Is Active
+          </label>
+        </div>
 
-          <div className={styles.formGroup}>
-            <label htmlFor="employee_password" className={styles.label}>
-              Password
-            </label>
-            <div className={styles.passwordWrapper}>
-              <input
-                type={showPassword ? "text" : "password"}
-                id="employee_password"
-                name="employee_password"
-                value={employeeData.employee_password || ""}
-                onChange={handleChange}
-                className={styles.input}
-                placeholder="Enter New Employee Password"
-              />
-              <span
-                className={styles.passwordToggle}
-                onClick={() => setShowPassword(!showPassword)}
-              >
-                {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
-              </span>
-            </div>
-          </div>
-
-          <div className={styles.lastformGroup}>
-            <input
-              type="checkbox"
-              id="active_employee"
-              name="active_employee"
-              checked={employeeData.active_employee === 1}
-              onChange={(e) =>
-                handleChange({
-                  target: {
-                    name: "active_employee",
-                    value: e.target.checked ? 1 : 0,
-                    type: "checkbox",
-                    checked: e.target.checked,
-                  },
-                })
-              }
-              className={styles.inputCheckbox}
-            />
-            <label htmlFor="active_employee" className={styles.label}>
-              Is Active
-            </label>
-          </div>
-
-          <button type="submit" className={styles.submitButton}>
-            Save Changes
-          </button>
-        </form>
-      </div>
+        <button type="submit" className={styles.submitButton}>
+          Save Changes
+        </button>
+      </form>
+    </div>
   );
 }
 
