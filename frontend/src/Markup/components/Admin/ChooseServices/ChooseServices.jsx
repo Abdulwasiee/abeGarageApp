@@ -93,7 +93,7 @@ const
     const response = await createOrder(orderData);
     alert(`Order created successfully with ID: ${response.order_id}`);
     setTimeout(() => {
-      navigate("/admin/orders");
+      navigate(`/admin/customers/customer-profile/${customerId}`);
     }, 1000);
   } catch (error) {
     setError(error.message);

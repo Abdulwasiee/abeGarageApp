@@ -32,7 +32,9 @@ const CreateOrder = ({ customer_id, vehicle_id, service_ids }) => {
     try {
    const response = await createOrder(orderPayload);
       console.log("Order created successfully:", response);
-      navigate("/admin/orders"); // Redirect after successful order creation
+      setTimeout(()=>{
+        navigate(`/admin/customers/customer-profile/${customer_id}`); 
+      }, 1000)
     } catch (error) {
       console.error(
         "Error creating order:",

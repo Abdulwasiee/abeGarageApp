@@ -32,12 +32,12 @@ async function createCustomer(req, res) {
   }
 
   // Validate phone number format (example: must be digits and between 10-15 digits)
-  const phoneRegex = /^\d{10,15}$/;
-  if (!phoneRegex.test(customer_phone_number)) {
-    return res
-      .status(400)
-      .json({ error: "Please enter a valid phone number." });
-  }
+  // const phoneRegex = /^\d{10,15}$/;
+  // if (!phoneRegex.test(customer_phone_number)) {
+  //   return res
+  //     .status(400)
+  //     .json({ error: "Please enter a valid phone number." });
+  // }
 
   try {
     const customerExists = await customerService.getCustomerByEmail(
