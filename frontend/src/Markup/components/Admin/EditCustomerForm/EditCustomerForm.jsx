@@ -68,9 +68,9 @@ const EditCustomerForm = () => {
     }
   };
 
-  if (loading) {
-    return <Loading />;
-  }
+  // if (loading) {
+  //   return <Loading />;
+  // }
 
   return (
     <div className={styles.formContainer}>

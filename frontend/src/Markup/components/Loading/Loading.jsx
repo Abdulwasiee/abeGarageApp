@@ -1,6 +1,6 @@
-import React from "react"; // Importing React to use JSX and React features
-import classes from "./Loading.module.css"; // Importing CSS module for styling the Loading component
-import loadingGif from "../../../assets/images/preloader.gif"; // Importing the loading GIF image
+import React from "react"; 
+import classes from "./Loading.module.css";
+import loadingGif from "../../../assets/images/preloader.gif"; 
 
 function Loading() {
   // Defining the Loading functional component
@@ -13,4 +13,4 @@ function Loading() {
   );
 }
 
-export default Loading; // Exporting the Loading component to be used in other parts of the application
+export default Loading;

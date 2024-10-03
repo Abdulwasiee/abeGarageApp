@@ -31,6 +31,17 @@ async function createCustomer(req, res) {
       .json({ error: "Please enter a valid email address." });
   }
 
+<<<<<<< HEAD
+=======
+  // Validate phone number format (example: must be digits and between 10-15 digits)
+  // const phoneRegex = /^\d{10,15}$/;
+  // if (!phoneRegex.test(customer_phone_number)) {
+  //   return res
+  //     .status(400)
+  //     .json({ error: "Please enter a valid phone number." });
+  // }
+
+>>>>>>> 5c78ca949d88b63cf5228ac1a368d8c725c1e616
   try {
     const customerExists = await customerService.getCustomerByEmail(
       customer_email
