@@ -1,5 +1,4 @@
 /* Default for large screens */
-
 .headerUpper {
   background-color: whitesmoke;
   padding-top: 5px;
@@ -26,6 +25,20 @@
   height: 70px;
 }
 
+/* Hide hamburger menu on large screens */
+.hamburgerMenu {
+  display: none;
+}
+
+.hamburgerIcon {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000000;
+}
+
+/* Default navigation (visible on large screens) */
 .rightColumn {
   display: flex;
   align-items: center;
@@ -69,6 +82,79 @@
   font-size: 16px;
 }
 
+/* Sidebar for small screens (hidden on large screens) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: #111;
+  color: #fff;
+  transition: 0.3s ease;
+  z-index: 200;
+}
+
+.showSidebar {
+  right: 0;
+}
+
+.sidebarContent {
+  padding: 20px;
+  position: relative;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebarNav {
+  margin-top: 50px;
+}
+
+.sidebarLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarLinks li {
+  margin-bottom: 20px;
+}
+
+.sidebarLinks a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.sidebarLinks a:hover {
+  color: darkorange;
+}
+
+.logoutButton {
+  padding: 10px 20px;
+  background-color:darkorange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logoutButton:hover {
+  background-color: darkred;
+}
+
 /* Medium Screens (Tablets, smaller laptops) */
 @media (max-width: 1024px) {
   .container {
@@ -86,48 +172,30 @@
 }
 
 /* Small Screens (Tablets and smaller devices) */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .logo img {
-    width: 200px;
-    height: 50px;
-    margin-bottom: 10px;
+@media (max-width: 775px) {
+  .hamburgerMenu {
+    display: block;
   }
 
   .rightColumn {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 10px;
+    display: none; /* Hide default menu on smaller screens */
   }
 
-  .mainMenu {
-    margin-right: 0;
-    width: 100%;
-  }
-
-  .navigation {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .navItem {
-    margin: 10px 0;
-    width: 100%;
-    text-align: left;
-  }
-
-  .navItem a {
-    font-size: 14px;
+  .sidebar {
+    display: block;
   }
 
   .bookButton {
+    padding: 10px 20px;
+    background-color: darkorange;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
     margin-top: 10px;
     width: 100%;
-    text-align: center;
   }
 }
 

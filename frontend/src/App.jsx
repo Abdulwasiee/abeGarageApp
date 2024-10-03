@@ -7,7 +7,7 @@ import AddEmployee from "./Markup/pages/Admin/AddEmployee/AddEmployee";
 import Header from "./Markup/components/mainHeader/Header";
 import Footer from "./Markup/components/footer/Footer";
 import ContactUs from "./Markup/pages/Root/ContactUs/ContactUs";
-
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import AboutUs from "./Markup/pages/Root/AboutUs/AboutUs";
 import Services from "./Markup/pages/Root/Services/Services";
 import { UserProvider } from "./context/UserContext";
@@ -36,12 +36,12 @@ function AdminLayout() {
       <Route path="add-order" element={<AddOrders />} />
       <Route path="step-three" element={<CustomerService />} />
       <Route path="orders" element={<Orders />} />
-      <Route path="dashboard" element={<Dashboard />} />
       <Route path="employees" element={<AllEmployees />} />
       <Route path="add-employee" element={<AddEmployee />} />
       <Route path="employees/:employee_id" element={<EditEmployee />} />
       <Route path="add-customer" element={<AddCustomer />} />
       <Route path="customers" element={<Customers />} />
+      <Route path="dashboard" element={<Dashboard />} />
       <Route
         path="services/edit-services/:service_id"
         element={<EditServicePage />}
@@ -79,7 +79,7 @@ function App() {
         <Route
           path="/admin/*"
           element={
-            <ProtectedRoute allowedRoles={[ROLES.ADMIN, ROLES.MANAGER]}>
+            <ProtectedRoute allowedRoles={[ROLES.ADMIN, ROLES.MANAGER, ROLES.EMPLOYEE]}>
               <AdminLayout />
             </ProtectedRoute>
           }

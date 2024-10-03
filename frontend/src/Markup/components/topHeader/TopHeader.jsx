@@ -6,6 +6,7 @@ const TopHeader = () => {
   const { user } = useUser(); // Retrieve the user object from context
   const [scrollingUp, setScrollingUp] = useState(true); // State to track if the user is scrolling up
   const [lastScrollY, setLastScrollY] = useState(0); // State to store the last scroll position
+  const [showWelcome, setShowWelcome] = useState(false); // State to trigger the welcome animation
 
   useEffect(() => {
     // Effect to handle scroll events
@@ -23,6 +24,17 @@ const TopHeader = () => {
     return () => window.removeEventListener("scroll", handleScroll); // Cleanup the event listener on component unmount
   }, [lastScrollY]); // Dependency array to trigger the effect when lastScrollY changes
 
+  useEffect(() => {
+    // Trigger the welcome animation when the user logs in, but only once per session
+    if (user && !sessionStorage.getItem("welcomeShown")) {
+      setShowWelcome(true); // Show the animation
+      sessionStorage.setItem("welcomeShown", "true"); // Set the flag in sessionStorage to prevent further animation
+      setTimeout(() => {
+        setShowWelcome(false); // Optionally, remove the animation class after it's done
+      }, 1500); // Animation duration of 1.5 seconds
+    }
+  }, [user]); // Trigger the effect whenever the user logs in
+
   return (
     // Render the top header
     <div className={`${styles.container} ${scrollingUp ? "" : styles.hidden}`}>
@@ -36,13 +48,17 @@ const TopHeader = () => {
         </div>
         <div>
           {user?.employee_first_name ? ( // Conditional rendering based on user presence
-            <div className={styles.phoneNumber1}>
-              Welcome: {user.employee_first_name} !{" "}
+            <div
+              className={`${styles.phoneNumber1} ${
+                showWelcome ? styles.welcomeAnimation : ""
+              }`}
+            >
+              Welcome: {user.employee_first_name}!{" "}
               {/* Display a personalized welcome message */}
             </div>
           ) : (
             <div className={styles.phoneNumber}>
-              Schedule Your Appointment Today : 1800 456 7890{" "}
+              Schedule Your Appointment Today: 1800 456 7890{" "}
               {/* Display default message */}
             </div>
           )}
