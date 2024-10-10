@@ -147,7 +147,7 @@ VALUES (1, 'Admin', 'Admin', 555-555-5555);
 
 -- Password is 123456
 INSERT INTO employee_pass (employee_id, employee_password_hashed)
-VALUES (1, '$2b$10$B6yvl4hECXploM.fCDbXz.brkhmgqNlawh9ZwbfkFX.F3xrs.15Xi');  
+VALUES (1, '$2b$10$Va4jUw5y2TKP.PDDNa5v3uJuLS.yMauhTr88JdNeLiH0dg6D9sgGi');  
 
 INSERT INTO employee_role (employee_id, company_role_id)
 VALUES (1, 3); 
